@@ -11,10 +11,13 @@ Para rodar o projeto utilizando o Docker, siga os passos abaixo:
    git clone <URL_DO_REPOSITORIO>
    cd cliente-gerenciamento
 
-2. **Construa a imagem Docker**:
+2. **Compile o projeto utilizando Maven**:
+   mvn clean package (para criar o .jar)
+
+3. **Construa a imagem Docker**:
    docker-compose build
 
-3. **Inicie os containers**:
+4. **Inicie os containers**:
    docker-compose up -d
 
 ## Efetuando o Login e utilizando os serviços
