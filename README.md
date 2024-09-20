@@ -7,9 +7,9 @@ Olá! Esse é o meu projeto de um sistema de gerenciamento de clientes. Foram im
 ### Importante!!
 Se você encontrar problemas ao iniciar a imagem do Java, isso pode ser devido ao MySQL não ter sido inicializado 100% e o Java ter tentado se conectar com ele antes disso. Para resolver isso, siga estes passos:
 
-Inicie o MySQL: Execute o comando docker-compose up mysql e aguarde até que o MySQL esteja completamente iniciado.
+**Inicie o MySQL**: Caso o docker-compose pare de rodar o MySql, Execute o comando docker-compose up mysql e aguarde até que o MySQL esteja completamente iniciado.
 
-Inicie a imagem do Java: Após garantir que o MySQL está rodando corretamente, execute o comando para iniciar a imagem do Java. Isso garantirá que a aplicação Java possa se conectar ao MySQL sem problemas.
+**Inicie a imagem do Java**: Após garantir que o MySQL está rodando corretamente, execute o comando para iniciar a imagem do Java. Isso garantirá que a aplicação Java possa se conectar ao MySQL sem problemas.
 
 Ao seguir esses passos, a imagem do Java deve funcionar corretamente.
 
