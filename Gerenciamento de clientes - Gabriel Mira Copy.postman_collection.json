@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "365d6870-f030-47c6-967f-1941c607d4d7",
+		"name": "Gerenciamento de clientes - Gabriel Mira Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23735739"
+	},
+	"item": [
+		{
+			"name": "Email Msg",
+			"item": [
+				{
+					"name": "enviarEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"destinatario\" : \"gbiel3mira@gmail.com\",\r\n    \"assunto\" : \"Teste Empiricus\",\r\n    \"corpo\" : \"Olá, isso é apenas um teste.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/enviarEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enviarEmail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "efetuarLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\" : \"49934943285\",\r\n    \"password\" : \"testebiel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "criarEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6IjQ5OTM0OTQzMjg1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODE4MDg1fQ.gRMs8o-JUwfk2folfH-bD603uRRFqp4iSBRt0mzW5ps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"gaga@gmail.com\",\r\n    \"cpf\" : \"39920034985\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "emailsPorUsuarioId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/emails/usuarioId/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emails",
+								"usuarioId",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarTodosEmails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6IjAwMDAwMDAwMDAwIiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2NzgyNDQxfQ.Yu_L1pHAbrAJ1IyNC9bePyilPKv5Qj9MAuZd7iWC5oY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmailPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/emails/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emails",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"gugu2@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/emails/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emails",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/emails/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emails",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "criarUsuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6IjQ4ODU3NDc0MzIxIiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODE1Njg0fQ.zfhAY6A4gR3Lv8jTTlyiFuLMr3eKV7bJL5PUDtDCTIc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"gabriel Mira\",\r\n    \"cpf\" : \"49948557551\",\r\n    \"password\" : \"gugu1555\",\r\n    \"ehAdmin\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarTodosUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODYwMzMwfQ.cytXIcj5Z92HX27GTjLGLbFqJC2kOF0fV29SJS2Xhro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsuarioPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarUsuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODcyMzU3fQ.JYt2mkVUiDhjnTrXjUcv8Qgp8XuNDV7i7xmxb5gUInA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"teste empp2\",\r\n    \"cpf\" : \"93344995854\",\r\n    \"password\" : \"testeempp\",\r\n    \"ehAdmin\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarUsuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgZ2VyZW5jaWFtZW50b19jbGllbnRlcyIsInN1YiI6Ijg1NTc1NDQzNzQ1IiwiQURNSU46ICI6dHJ1ZSwiZXhwIjoxNzI2ODc1ODI0fQ.bS9LwXu2XEnHEyeleDT5dgIkR9x3wWxvXE-pqjvX84s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PopularBD",
+			"item": [
+				{
+					"name": "popularBD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "//sem entrada\r\n//para fazer login utilize = {\"cpf\" : \"85575443745\", \"password\" : \"admin123\"} *Já está no collection, preparado*",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/popularBD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"popularBD"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
