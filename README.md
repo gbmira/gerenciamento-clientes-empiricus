@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Clientes
 
-Olá! Esse é meu projeto feito para a Empiricus, um sistema de gerenciamento de clientes. Foram implementados todos os serviços requeridos e alguns diferenciais: envio de e-mail assíncrono, build pelo Docker e alguns serviços extras para melhor interação com a API.
+Olá! Esse é o meu projeto de um sistema de gerenciamento de clientes. Foram implementados todos os serviços requeridos e alguns diferenciais: envio de e-mail assíncrono, build pelo Docker e alguns serviços extras para melhor interação com a API.
 
 ## Executando o Docker
 
