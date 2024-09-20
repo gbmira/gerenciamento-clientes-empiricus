@@ -22,9 +22,10 @@ Para rodar o projeto utilizando o Docker, siga os passos abaixo:
 1. Após rodar o docker, você terá que utilizar o serviço **"/popularBD"** (apenas para criar um usuario admin, pois o banco de dados se iniciará vazio e o serviço de criar o usuário é autenticado, conforme solicitado).
 
 2. Após ter o "admin" criado, deverá realizar o login no serviço **"/login"**, com os dados no body(na collection também temos essa informação):
+
    {"cpf" : "85575443745", "password" : "admin123"}
 
-3. Feito o login e retornado 201, será gerado e retornado um **token**, agora conseguirá utilizar todos os outros serviços! Basta ir na aba "Authorization", usar a opção **"Bearer Token"** e colar o token obtido.
+4. Feito o login e retornado 201, será gerado e retornado um **token**, agora conseguirá utilizar todos os outros serviços! Basta ir na aba "Authorization", usar a opção **"Bearer Token"** e colar o token obtido.
 
 ## Contato
 
